@@ -17,18 +17,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(path = "/api/v1/tasks")
 public class TaskController {
-    private final TaskService taskService;
-    private  final TaskMapper taskMapper;
+
+    private final TaskService taskService; //to communicate with service layer
+    private  final TaskMapper taskMapper; //to take objects owned by presentation layer, and map them to service layer objects
 
     public TaskController(TaskService taskService, TaskMapper taskMapper) {
         this.taskService = taskService;
         this.taskMapper = taskMapper;
     }
 
+    // Create Task Endpoint
     @PostMapping
-    public ResponseEntity<TaskDto> createTask(
-            @Valid @RequestBody CreateTaskRequestDto createTaskRequestDto
-    ){
+    public ResponseEntity<TaskDto> createTask(@Valid @RequestBody CreateTaskRequestDto createTaskRequestDto)
+    {
         CreateTaskRequest createTaskRequest = taskMapper.fromDto(createTaskRequestDto);
         Task task = taskService.createTask(createTaskRequest);
         TaskDto createdTaskDto = taskMapper.toDto(task);
