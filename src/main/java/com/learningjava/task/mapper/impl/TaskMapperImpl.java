@@ -1,8 +1,10 @@
 package com.learningjava.task.mapper.impl;
 
 import com.learningjava.task.domain.CreateTaskRequest;
+import com.learningjava.task.domain.UpdateTaskRequest;
 import com.learningjava.task.domain.dto.CreateTaskRequestDto;
 import com.learningjava.task.domain.dto.TaskDto;
+import com.learningjava.task.domain.dto.UpdateTaskRequestDto;
 import com.learningjava.task.domain.entity.Task;
 import com.learningjava.task.mapper.TaskMapper;
 import org.springframework.stereotype.Component;
@@ -16,6 +18,17 @@ public class TaskMapperImpl implements TaskMapper {
                 dto.description(),
                 dto.dueDate(),
                 dto.priority()
+        );
+    }
+
+    @Override
+    public UpdateTaskRequest fromDto(UpdateTaskRequestDto dto) {
+        return new UpdateTaskRequest(
+                dto.title(),
+                dto.description(),
+                dto.dueDate(),
+                dto.priority(),
+                dto.status()
         );
     }
 
