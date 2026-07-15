@@ -39,6 +39,15 @@ public class TaskController {
         return new ResponseEntity<>(createdTaskDto, HttpStatus.CREATED);
     }
 
+    // Create List Task Endpoint
+    @GetMapping
+    public ResponseEntity<List<TaskDto>> listTasks(){
+        List<Task> tasks = taskService.listTasks();
+        List<TaskDto> listedTasks = tasks.stream().map(taskMapper::toDto).toList();
+
+        return ResponseEntity.ok(listedTasks);
+    }
+
     // Update Task Endpoint
     @PutMapping(path = "/{taskId}")
     public ResponseEntity<TaskDto> createTask(@PathVariable UUID taskId, @Valid @RequestBody UpdateTaskRequestDto updateTaskRequestDto)
@@ -50,12 +59,11 @@ public class TaskController {
         return ResponseEntity.ok(updatedTaskDto);
     }
 
-    // Create List Task Endpoint
-    @GetMapping
-    public ResponseEntity<List<TaskDto>> listTasks(){
-        List<Task> tasks = taskService.listTasks();
-        List<TaskDto> listedTasks = tasks.stream().map(taskMapper::toDto).toList();
-
-        return ResponseEntity.ok(listedTasks);
+    // Delete Task Endpoint
+    @DeleteMapping(path = "/{taskId}")
+    public ResponseEntity<Void> deleteTask(@PathVariable UUID taskId) {
+        taskService.deleteTask(taskId);
+        return ResponseEntity.noContent().build();
     }
+
 }

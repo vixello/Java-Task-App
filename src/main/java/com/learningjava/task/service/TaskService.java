@@ -10,5 +10,6 @@ import java.util.UUID;
 public interface TaskService {
     Task createTask(CreateTaskRequest request);
     Task updateTask(UUID taskId, UpdateTaskRequest request);
+    void deleteTask(UUID taskId);
     List<Task> listTasks();
 }

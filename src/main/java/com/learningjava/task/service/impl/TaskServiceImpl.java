@@ -42,11 +42,6 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public List<Task> listTasks(){
-        return taskRepository.findAll(Sort.by(Sort.Direction.ASC, "created"));
-    }
-
-    @Override
     public Task updateTask(UUID taskId, UpdateTaskRequest request){
         Task task = taskRepository.findById(taskId).orElseThrow(() -> new TaskNotFoundException(taskId));
 
@@ -58,6 +53,16 @@ public class TaskServiceImpl implements TaskService {
         task.setUpdated(Instant.now());
 
         return taskRepository.save(task);
+    }
+
+    @Override
+    public void deleteTask(UUID taskId){
+        taskRepository.deleteById(taskId);
+    }
+
+    @Override
+    public List<Task> listTasks(){
+        return taskRepository.findAll(Sort.by(Sort.Direction.ASC, "created"));
     }
 
 }
