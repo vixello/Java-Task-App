@@ -94,6 +94,7 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 
 * [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
 * [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
+* [![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
 
 <!--* [![React][React.js]][React-url]
 * [![Vue][Vue.js]][Vue-url]
@@ -108,38 +109,26 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Instalation
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+The backend can be ran locally or using deployed version here: 'project_link'
 
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+To run the backend locally:
+1. Clone the repo
    ```sh
    git clone https://github.com/vixello/Java-Task-App.git
    ```
-3. Install NPM packages
+2. Navigate to the backend project folder
    ```sh
-   npm install
+    cd backend
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
+3. Build the project using Maven
    ```sh
-   git remote set-url origin vixello/Java-Task-App
-   git remote -v # confirm the changes
+    ./mvnw clean install
+   ```
+4. Start the Spring Boot application
+   ```sh
+    ./mvnw spring-boot:run
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
