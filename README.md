@@ -37,7 +37,7 @@
 <h3 align="center">Java Task App Backend</h3>
 
   <p align="center">
-    project_description
+    project_description - A simple java task app backend.
     <br />
     <a href="https://github.com/vixello/Java-Task-App"><strong>Explore the docs »</strong></a>
     <br />
@@ -83,9 +83,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `vixello`, `Java-Task-App`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`, `project_license`
+This app was built using Spring Boot and Java 25. It features everything you would expect from a simple task app 
+Here's a blank template to get started. To avoid retyping too much info, do a search and replace with your text editor for the following: `vixello`, `Java-Task-App`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description - A simple java task app backend.`, `project_license`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
