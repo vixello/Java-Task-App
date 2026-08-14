@@ -35,18 +35,7 @@
 
 <h3 align="center">Java Task App Backend</h3>
 
-  <p align="center">
-    project_description - A simple java task app backend.
-    <br />
-    <a href="https://github.com/vixello/Java-Task-App"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/vixello/Java-Task-App">View Demo</a>
-    &middot;
-    <a href="https://github.com/vixello/Java-Task-App/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
-    &middot;
-    <a href="https://github.com/vixello/Java-Task-App/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
-  </p>
+
 </div>
 
 
@@ -59,13 +48,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#instalation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -105,6 +88,7 @@ Here's a blank template to get started. To avoid retyping too much info, do a se
 
 <!-- GETTING STARTED -->
 ## Instalation
+The app is deployed on https://java-task-app.onrender.com.
 
 The backend can be ran locally or using deployed version here: 'project_link'
 
